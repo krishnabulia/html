@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background: linear-gradient(135deg,#161616 15%,#000000 55%);
+	min-height: 100h;
+	min-height: 100dvh;
+}
+header {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header .logo {
+    color: #bb390d;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ff1e00;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 550px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: rgb(248, 46, 0);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: rgb(248, 46, 0);
+    color: rgb(6, 0, 0);
+    border-radius: 50%;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 90px;
+    width: 580px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p{
+  color:rgb(248, 46, 0);
+  padding-top:7px; 
+}
+
+.description h1 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 650px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('./image1.jpg');
+}
+.card[for="c2"] {
+    background-image: url('./image2.jpg');
+}
+.card[for="c3"] {
+    background-image: url('./image3.jpg');
+}
+.card[for="c4"] {
+    background-image: url('./image4.jpg');
+}
+.card[for="c5"] {
+    background-image: url('./image5.jpg');
+}
+.card[for="c6"] {
+    background-image: url('./image6.jpg');
+}
+.card[for="c7"] {
+    background-image: url('./image7.jpg');
+}
+.card[for="c8"] {
+    background-image: url('./image8.jpg');
+}
+.carousel-prev, .carousel-next {
+    background-color: #0a0100;
+    color: #fff;}
+footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    color: rgb(248, 46, 0);
+}
+</style>
+    <title>landing page</title>
+</head>
+<body> 
+<header>
+    <div class="logo">anime time</div>
+    <nav>
+        <ul>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">anime series</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h1>DEMON SLAYER: KIMETSU NO YAIBA</h1>
+                        <p>(2019)</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h1>JUJUTSU KAISEN</h1>
+                        <p>(2020)</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h1>TOKYO REVENGERS</h1>
+                        <p>(2021)</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4" >
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h1>HAIKYUU!!</h1>
+                        <p>(2014)</p>
+                    </div>
+                </div>
+            </label><input type="radio" name="slide" id="c5" checked>
+            <label for="c5" class="card">
+                <div class="row">
+                    <div class="icon">5</div>
+                    <div class="description">
+                        <h1>VINLAND SAGA</h1>
+                        <p>(2019)</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <button class="carousel-prev">Previous</button>
+    <button class="carousel-next">Next</button>
+    <footer>
+        <p>&copy; 2024 my website. All rights reserved.</p>
+    </footer>  
+</body>
+</html>

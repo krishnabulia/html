@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+body{
+    margin: 0;
+    font-family: 'Lacquer', cursive;
+    font-family: 15px;
+}
+header{
+    width: 1300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+header .logo img{
+    height: 40px;
+}
+header nav{
+    width: 80%;
+}
+header nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li{
+    padding: 0 30px;
+    color: #fff;
+}
+.banner{
+    margin-top: -50px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.4);
+}
+.content{
+    text-align: center;
+    color: red;
+    text-shadow: 0 10px 50px #630707;
+}
+h1{
+    margin: 0;
+    font-size: 6em;
+    animation: animationBlur 5s linear infinite;
+}
+@keyframes animationBlur{
+    0%{
+        filter: blur(0);
+    }80%{
+        filter: blur(0);
+    }
+    90%{
+        filter: blur(5px);
+    }100%{
+        filter: blur(0);
+    }
+}
+.des{
+    rotate: -5deg;
+    text-align: left;
+} 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo - Copy.jpg" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>INFO</li>
+                <li>CONTACT</li>
+                <li>LOGIN</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <video autoplay muted loop class="myVideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>
+                CHAINSaW MaN?!
+            </h1>
+            <div class="des">
+                <!-- 10 -->
+                Lorem ipsum dolor sit 
+                <br> amet consectetur adipisicing elit. Officia, ut!
+            </div>
+        </div>
+    </div>
+</body>
+</html>

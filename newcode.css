@@ -1,0 +1,81 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+body {
+	font-family: "Montserrat", sans-serif;
+	background: #ff1500d3;
+}
+.team-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+}
+.box {
+	margin: auto;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	max-width: 400px;
+	transition: transform 0.3s ease;
+}
+.box img {
+	width: 100%;
+	display: block;
+	border-radius: 10px;
+	transition: transform 0.5s ease;
+}
+.box:hover {
+	transform: scale(1.05);
+}
+.box figcaption {
+	width: 100%;
+	bottom: 0;
+	padding: 20px;
+	text-align: center;
+	background: rgba(41, 29, 4, 0.842);
+	transform: translate(100%);
+	transition: transform 0.5s ease;
+	border-radius: 100px 100px 0 0;
+}
+.box:hover figcaption {
+	transform: translate(0);
+}
+.insite{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 10vh;
+	color: #fff;
+}
+.box h2 {
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: "poppins", sans-serif;
+	margin: 0;
+}
+.box p {	
+	
+	font-size: 14px;
+}
+.socials {
+	margin-top: 10px;
+}
+.socials i {
+	font-size: 18px;
+	margin: 0 10px;
+}
+@media(max-width: 800px) {
+	.team-area {
+		flex-direction: column;
+	}
+}
+@media(max-width: 600px) {
+	.box h2 {
+		font-size: 20px;
+	}
+}
